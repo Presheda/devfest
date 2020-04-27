@@ -14,4 +14,6 @@ class Devfest {
 
   static SharedPreferences prefs;
 
+  static const String darkModePref = "darkModePref";
+
 }
