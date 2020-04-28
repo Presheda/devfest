@@ -21,8 +21,6 @@ abstract class ConfigEvent extends Equatable {
 class DarkModeEvent extends ConfigEvent{
 
   final bool darkOn;
-
-
   DarkModeEvent(this.darkOn);
 
   @override
@@ -30,12 +28,9 @@ class DarkModeEvent extends ConfigEvent{
 
   @override
   Future<ConfigState> applyAsync({ConfigState currentState, ConfigBloc bloc}) async {
-
-
     try{
       bloc.darkModeOn = darkOn;
       Devfest.prefs.setBool(Devfest.darkModePref, darkOn);
-
       return InConfigState();
     } catch(_, stackTrace){
       print("$_, $stackTrace");

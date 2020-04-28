@@ -22,8 +22,13 @@ class ConfigBloc extends Bloc<ConfigEvent, ConfigState>{
 
   @override
   Stream<ConfigState> mapEventToState(ConfigEvent event) async* {
-
-
+    try{
+      yield UnConfigState();
+      yield await event.applyAsync(currentState: state, bloc: this);
+    } catch(_, stackTrace){
+      print("$_, $stackTrace");
+      yield state;
+    }
   }
 
 

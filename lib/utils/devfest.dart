@@ -12,8 +12,11 @@ class Devfest {
   static bool isDebugMode = true;
 
 
-  static SharedPreferences prefs;
 
+  static const String banner_light = "assets/images/banner_light.png";
+  static const String banner_dark = "assets/images/banner_dark.png";
+
+  static SharedPreferences prefs;
   static const String darkModePref = "darkModePref";
 
 }
