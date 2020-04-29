@@ -51,8 +51,8 @@ class AgendaPage extends StatelessWidget {
           body: TabBarView(
               children: <Widget>[
                 SessionList(allSessions: sessions,),
-                Container(),
-                Container(),
+                SessionList(allSessions: sessions,),
+                SessionList(allSessions: sessions,),
               ],
           )
       ),

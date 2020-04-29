@@ -1,6 +1,8 @@
 import 'package:devfest/agenda/agenda_page.dart';
 import 'package:devfest/config/config_bloc.dart';
 import 'package:devfest/speakers/speaker_page.dart';
+import 'package:devfest/sponsors/sponsor_page.dart';
+import 'package:devfest/team/team_page.dart';
 import 'package:devfest/universal/image_card.dart';
 import 'package:devfest/utils/devfest.dart';
 import 'package:devfest/utils/tool.dart';
@@ -105,13 +107,13 @@ class HomeFront extends StatelessWidget {
         icon: Icons.people,
         color: Colors.amber,
         title: Devfest.team_text,
-        onPressed: (){}
+        onPressed: ()=> Navigator.pushNamed(context, TeamPage.routeName),
       ),
       ActionCard(
         icon: Icons.attach_money,
         color: Colors.purple,
         title: Devfest.sponsor_text,
-        onPressed: (){}
+        onPressed: ()=> Navigator.pushNamed(context, SponsorPage.routeName),
       ),
       ActionCard(
         icon: Icons.question_answer,
